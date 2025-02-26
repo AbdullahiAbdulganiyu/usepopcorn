@@ -165,6 +165,7 @@ function WatchedBox() {
       {isOpen2 && (
         <>
           <WatchedSummary watched={watched} />
+          <WatchedMoviesList watched={watched} />
         </>
       )}
     </div>
@@ -200,7 +201,7 @@ function WatchedSummary({ watched }) {
   );
 }
 
-function WatchedMoviesList() {
+function WatchedMoviesList({ watched }) {
   return (
     <ul className="list">
       {watched.map((movie) => (

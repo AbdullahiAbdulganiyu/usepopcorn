@@ -67,9 +67,6 @@ function NavBar() {
         <h1>usePopcorn</h1>
       </div>
       <Search />
-      <p className="num-results">
-        Found <strong>X</strong> results
-      </p>
     </nav>
   );
 }
@@ -84,6 +81,14 @@ function Search() {
       value={query}
       onChange={(e) => setQuery(e.target.value)}
     />
+  );
+}
+
+function NumResults() {
+  return (
+    <p className="num-results">
+      Found <strong>X</strong> results
+    </p>
   );
 }
 

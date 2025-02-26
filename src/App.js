@@ -100,7 +100,12 @@ function NumResults() {
 }
 
 function Main() {
-  return <main className="main"></main>;
+  return (
+    <main className="main">
+      <ListBox />
+      <WatchedBox />
+    </main>
+  );
 }
 
 function ListBox() {

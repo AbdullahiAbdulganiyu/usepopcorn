@@ -4,15 +4,24 @@ const containerStyle = {
   gap: "16px",
 };
 
+const startContainerStyle = {
+  display: "flex",
+  gap: "4px",
+};
+
+const textContainerStyle = {
+  lineHeight: "1",
+  margin: "0",
+};
 export default function StarRating() {
   return (
     <div style={containerStyle}>
-      <div>
+      <div style={startContainerStyle}>
         {Array.from({ length: 5 }, (_, i) => (
           <span>S{i + 1}</span>
         ))}
       </div>
-      <p>10</p>
+      <p style={textContainerStyle}>10</p>
     </div>
   );
 }

@@ -26,7 +26,7 @@ export default function StarRating({ maxRating = 5 }) {
         {Array.from({ length: maxRating }, (_, i) => (
           <Star
             key={i}
-            full={rating >= i + 1}
+            full={temRating ? temRating >= i + 1 : rating >= i + 1}
             onRate={() => handleRating(i + 1)}
             onHoverIn={() => setTempRating(i + 1)}
             onHoverOut={() => setTempRating(0)}

@@ -61,6 +61,7 @@ export default function App() {
       </NavBar>
 
       <Main>
+        {/* Passing explicit props */}
         <Box element={<MovieList movies={movies} />} />
         <Box
           element={
@@ -70,6 +71,7 @@ export default function App() {
             </>
           }
         />
+        {/* passing children props */}
         {/* <Box>
           <MovieList movies={movies} />
         </Box>

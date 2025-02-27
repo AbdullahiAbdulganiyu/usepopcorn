@@ -6,7 +6,6 @@ const containerStyle = {
 
 const startContainerStyle = {
   display: "flex",
-  gap: "4px",
 };
 
 const textContainerStyle = {

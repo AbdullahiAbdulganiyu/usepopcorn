@@ -1,9 +1,10 @@
+const containerStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "16px",
+};
+
 export default function StarRating() {
-  const containerStyle = {
-    display: "flex",
-    alignItems: "center",
-    gap: "16px",
-  };
   return (
     <div style={containerStyle}>
       <div>

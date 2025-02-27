@@ -23,7 +23,7 @@ export default function StarRating({ maxRating = 5 }) {
           <Star key={i} />
         ))}
       </div>
-      <p style={textContainerStyle}>10</p>
+      <p style={textContainerStyle}>{rating || ""}</p>
     </div>
   );
 }

@@ -16,6 +16,7 @@ const textContainerStyle = {
 };
 export default function StarRating({ maxRating = 5 }) {
   const [rating, setRating] = useState(1);
+  const [temRating, setTempRating] = useState(0);
   function handleRating(rating) {
     setRating(rating);
   }

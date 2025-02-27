@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const containerStyle = {
   display: "flex",
   alignItems: "center",
@@ -13,6 +15,7 @@ const textContainerStyle = {
   margin: "0",
 };
 export default function StarRating({ maxRating = 5 }) {
+  const [rating, setRating] = useState(1);
   return (
     <div style={containerStyle}>
       <div style={startContainerStyle}>

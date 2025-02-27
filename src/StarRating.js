@@ -13,11 +13,11 @@ const textContainerStyle = {
   lineHeight: "1",
   margin: "0",
 };
-export default function StarRating() {
+export default function StarRating({ maxRating }) {
   return (
     <div style={containerStyle}>
       <div style={startContainerStyle}>
-        {Array.from({ length: 5 }, (_, i) => (
+        {Array.from({ length: maxRating }, (_, i) => (
           <span>S{i + 1}</span>
         ))}
       </div>

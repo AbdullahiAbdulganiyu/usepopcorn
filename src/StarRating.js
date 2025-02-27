@@ -15,7 +15,7 @@ const textContainerStyle = {
   margin: "0",
 };
 export default function StarRating({ maxRating = 5 }) {
-  const [rating, setRating] = useState(1);
+  const [rating, setRating] = useState(0);
   const [temRating, setTempRating] = useState(0);
   function handleRating(rating) {
     setRating(rating);

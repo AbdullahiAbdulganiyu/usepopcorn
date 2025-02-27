@@ -26,9 +26,16 @@ export default function StarRating({ maxRating = 5 }) {
   );
 }
 
+const startStyle = {
+  width: "48px",
+  height: "48px",
+  display: "block",
+  cursor: "pointer",
+};
+
 function Star() {
   return (
-    <span>
+    <span role="button" style={startStyle}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"

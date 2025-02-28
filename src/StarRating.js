@@ -47,14 +47,14 @@ export default function StarRating({
   );
 }
 
-const startStyle = {
-  width: "48px",
-  height: "48px",
-  display: "block",
-  cursor: "pointer",
-};
-
 function Star({ onRate, full, onHoverIn, onHoverOut }) {
+  const startStyle = {
+    width: "48px",
+    height: "48px",
+    display: "block",
+    cursor: "pointer",
+  };
+
   return (
     <span
       role="button"

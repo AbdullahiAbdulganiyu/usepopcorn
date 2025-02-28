@@ -38,6 +38,8 @@ export default function StarRating({
             onRate={() => handleRating(i + 1)}
             onHoverIn={() => setTempRating(i + 1)}
             onHoverOut={() => setTempRating(0)}
+            color={color}
+            size={size}
           />
         ))}
       </div>
@@ -47,14 +49,7 @@ export default function StarRating({
   );
 }
 
-function Star({
-  onRate,
-  full,
-  onHoverIn,
-  onHoverOut,
-  color = "#fcc419",
-  size = 48,
-}) {
+function Star({ onRate, full, onHoverIn, onHoverOut, color, size }) {
   const startStyle = {
     width: "48px",
     height: "48px",

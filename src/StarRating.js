@@ -47,7 +47,14 @@ export default function StarRating({
   );
 }
 
-function Star({ onRate, full, onHoverIn, onHoverOut }) {
+function Star({
+  onRate,
+  full,
+  onHoverIn,
+  onHoverOut,
+  color = "#fcc419",
+  size = 48,
+}) {
   const startStyle = {
     width: "48px",
     height: "48px",

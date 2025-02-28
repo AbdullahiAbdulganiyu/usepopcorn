@@ -10,16 +10,18 @@ const startContainerStyle = {
   display: "flex",
 };
 
-const textContainerStyle = {
-  lineHeight: "1",
-  margin: "0",
-};
 export default function StarRating({ maxRating = 5 }) {
   const [rating, setRating] = useState(0);
   const [temRating, setTempRating] = useState(0);
   function handleRating(rating) {
     setRating(rating);
   }
+
+  const textContainerStyle = {
+    lineHeight: "1",
+    margin: "0",
+  };
+
   return (
     <div style={containerStyle}>
       <div style={startContainerStyle}>

@@ -45,7 +45,11 @@ export default function StarRating({
         ))}
       </div>
       {/* <p style={textContainerStyle}>{rating || ""}</p> */}
-      <p style={textContainerStyle}>{temRating || rating || ""}</p>
+      <p style={textContainerStyle}>
+        {messages.length === maxRating
+          ? messages[temRating ? temRating - 1 : rating - 1]
+          : temRating || rating || ""}
+      </p>
     </div>
   );
 }

@@ -15,11 +15,13 @@ export default function StarRating({
   color = "#fcc419",
   size = 48,
   messages = [],
+  onSetRating,
 }) {
   const [rating, setRating] = useState(0);
   const [temRating, setTempRating] = useState(0);
   function handleRating(rating) {
     setRating(rating);
+    onSetRating(rating);
   }
 
   const textContainerStyle = {

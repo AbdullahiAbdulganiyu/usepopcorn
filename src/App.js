@@ -66,7 +66,7 @@ export default function App() {
           `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
         );
         if (!res.ok)
-          throw Error("Something went wrong while fetching the movie");
+          throw new Error("Something went wrong while fetching the movie");
         const data = await res.json();
         setMovies(data.Search);
       } catch (err) {

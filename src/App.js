@@ -88,9 +88,7 @@ export default function App() {
           }
         /> */}
         {/* passing children props */}
-        <Box>
-          <MovieList movies={movies} />
-        </Box>
+        <Box>{isLoading ? <Loader /> : <MovieList movies={movies} />}</Box>
 
         <Box>
           <WatchedSummary watched={watched} />

@@ -264,7 +264,7 @@ function MovieDetails({ selectedId, onCloseMovie }) {
     imdbRating,
     Plot: plot,
     Released: released,
-    Actor: actor,
+    Actors: actors,
     Director: director,
     Genre: genre,
   } = movie;
@@ -304,7 +304,7 @@ function MovieDetails({ selectedId, onCloseMovie }) {
         <p>
           <em>{plot}</em>
         </p>
-        <p>Staring {actor}</p>
+        <p>Staring {actors}</p>
         <p>Directed by {director}</p>
       </section>
       {selectedId}

@@ -52,6 +52,7 @@ const average = (arr) =>
 
 const KEY = "7fa2bfb2";
 export default function App() {
+  const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -142,7 +143,6 @@ function Logo() {
 }
 
 function Search() {
-  const [query, setQuery] = useState("");
   return (
     <input
       className="search"

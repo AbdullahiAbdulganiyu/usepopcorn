@@ -255,6 +255,7 @@ function Movie({ movie, onSelectMovie }) {
 // }
 
 function MovieDetails({ selectedId, onCloseMovie }) {
+  const [movie, setMovie] = useState({});
   useEffect(function () {
     async function getMovieDeatails() {
       const res = await fetch(

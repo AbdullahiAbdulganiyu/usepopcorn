@@ -235,7 +235,7 @@ function Movie({ movie }) {
 //   );
 // }
 
-function SelectedMovie({ selectedId }) {
+function MovieDetails({ selectedId }) {
   return <div className="details">{selectedId}</div>;
 }
 

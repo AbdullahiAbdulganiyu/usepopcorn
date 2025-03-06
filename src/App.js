@@ -59,28 +59,31 @@ export default function App() {
   const [error, setError] = useState("");
   const tempQuery = "interstellar";
 
-  useEffect(function () {
-    async function fetchMovie() {
-      try {
-        setIsLoading(true);
-        setError("");
-        const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
-        );
-        if (!res.ok)
-          throw new Error("Something went wrong while fetching the movie");
-        const data = await res.json();
-        if (data.Response === "False") throw new Error("Movie Not found");
-        setMovies(data.Search);
-      } catch (err) {
-        console.error(err.message);
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
+  useEffect(
+    function () {
+      async function fetchMovie() {
+        try {
+          setIsLoading(true);
+          setError("");
+          const res = await fetch(
+            `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+          );
+          if (!res.ok)
+            throw new Error("Something went wrong while fetching the movie");
+          const data = await res.json();
+          if (data.Response === "False") throw new Error("Movie Not found");
+          setMovies(data.Search);
+        } catch (err) {
+          console.error(err.message);
+          setError(err.message);
+        } finally {
+          setIsLoading(false);
+        }
       }
-    }
-    fetchMovie();
-  }, []);
+      fetchMovie();
+    },
+    [query]
+  );
   return (
     <>
       <NavBar>

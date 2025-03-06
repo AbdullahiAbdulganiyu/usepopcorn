@@ -264,7 +264,7 @@ function MovieDetails({ selectedId, onCloseMovie }) {
 
       const data = await res.json();
 
-      console.log(data);
+      setMovie(data);
     }
     getMovieDeatails();
   }, []);

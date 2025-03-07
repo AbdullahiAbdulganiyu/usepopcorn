@@ -275,6 +275,19 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
     Director: director,
     Genre: genre,
   } = movie;
+
+  function handleAdd() {
+    const newWatchedMovie = {
+      imdbID: selectedId,
+      title,
+      year,
+      poster,
+      imdbRating: Number(imdbRating),
+      runtime: Number(runtime.split(" ").at(0)),
+    };
+    onAddWatched(newWatchedMovie);
+  }
+
   useEffect(
     function () {
       async function getMovieDeatails() {

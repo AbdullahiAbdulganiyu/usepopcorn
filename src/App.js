@@ -72,6 +72,10 @@ export default function App() {
     setWatched((watched) => [...watched, movie]);
   }
 
+  function handleDeleteWatched(id) {
+    setWatched(watched.filter((movie) => movie.imdbId !== id));
+  }
+
   useEffect(
     function () {
       async function fetchMovie() {

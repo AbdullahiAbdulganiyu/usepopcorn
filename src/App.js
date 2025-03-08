@@ -127,7 +127,11 @@ export default function App() {
 
           {isLoading && <Loader />}
           {!isLoading && !error && (
-            <MovieList movies={movies} onSelectMovie={handleSelectMovie} />
+            <MovieList
+              movies={movies}
+              onSelectMovie={handleSelectMovie}
+              watched={watched}
+            />
           )}
           {error && <ErrorMessage message={error} />}
         </Box>
@@ -260,7 +264,7 @@ function Movie({ movie, onSelectMovie }) {
 //   );
 // }
 
-function MovieDetails({ selectedId, onCloseMovie, onAddWatched }) {
+function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");

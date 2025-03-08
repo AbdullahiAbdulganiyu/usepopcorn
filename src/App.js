@@ -127,11 +127,7 @@ export default function App() {
 
           {isLoading && <Loader />}
           {!isLoading && !error && (
-            <MovieList
-              movies={movies}
-              onSelectMovie={handleSelectMovie}
-              watched={watched}
-            />
+            <MovieList movies={movies} onSelectMovie={handleSelectMovie} />
           )}
           {error && <ErrorMessage message={error} />}
         </Box>
@@ -142,6 +138,7 @@ export default function App() {
               selectedId={selectedId}
               onCloseMovie={handleCloseMovie}
               onAddWatched={handleAddWatched}
+              watched={watched}
             />
           ) : (
             <>

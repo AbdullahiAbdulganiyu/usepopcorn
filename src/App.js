@@ -442,6 +442,9 @@ function WatchedMovie({ movie, onDeleteWatched }) {
           <span>⏳</span>
           <span>{movie.runtime} min</span>
         </p>
+        <button className="btn-delete" onClick={() => onDeleteWatched}>
+          X
+        </button>
       </div>
     </li>
   );

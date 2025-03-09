@@ -106,6 +106,9 @@ export default function App() {
         return;
       }
       fetchMovie();
+      return function () {
+        controller.abort();
+      };
     },
     [query]
   );

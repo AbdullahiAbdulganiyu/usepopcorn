@@ -315,12 +315,10 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
   useEffect(
     function () {
-      const controller = new AbortController();
       async function getMovieDeatails() {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`,
-          { signal: controller.signal }
+          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
         );
 
         const data = await res.json();
@@ -329,10 +327,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
         setIsLoading(false);
       }
       getMovieDeatails();
-
-      return function () {
-        controller.abort();
-      };
     },
     [selectedId]
   );

@@ -307,6 +307,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
   useEffect(
     function () {
+      const controller = new AbortController();
       async function getMovieDeatails() {
         setIsLoading(true);
         const res = await fetch(

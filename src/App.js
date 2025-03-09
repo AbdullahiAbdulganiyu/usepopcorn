@@ -321,6 +321,10 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
         setIsLoading(false);
       }
       getMovieDeatails();
+
+      return function () {
+        controller.abort();
+      };
     },
     [selectedId]
   );

@@ -315,6 +315,12 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 
   useEffect(
     function () {
+      function callBack(e) {
+        if (e.code === "Escape") {
+          onCloseMovie();
+          console.log("Closing");
+        }
+      }
       document.addEventListener("keydown", function (e) {
         if (e.code === "Escape") {
           onCloseMovie();

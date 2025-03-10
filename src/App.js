@@ -321,6 +321,15 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
           console.log("Closing");
         }
       });
+
+      return function () {
+        document.removeEventListener("keydown", function (e) {
+          if (e.code === "Escape") {
+            onCloseMovie();
+            console.log("Closing");
+          }
+        });
+      };
     },
     [onCloseMovie]
   );

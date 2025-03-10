@@ -318,7 +318,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       function callBack(e) {
         if (e.code === "Escape") {
           onCloseMovie();
-          console.log("Closing");
         }
       }
       document.addEventListener("keydown", callBack);

@@ -24,7 +24,8 @@ export default function App() {
   function handleAddWatched(movie) {
     setWatched((watched) => [...watched, movie]);
 
-    localStorage.setItem("watched", JSON.stringify([...watched, movie]));
+    // // using event handler to add the watched movie to localstorage
+    // localStorage.setItem("watched", JSON.stringify([...watched, movie]));
   }
 
   function handleDeleteWatched(id) {

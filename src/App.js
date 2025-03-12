@@ -163,11 +163,11 @@ function Logo() {
 }
 
 function Search({ query, setQuery }) {
-  useState(function () {
-    const el = document.querySelector(".search");
-    console.log(el);
-    el.focus();
-  }, []);
+  // useState(function () {
+  //   const el = document.querySelector(".search");
+  //   console.log(el);
+  //   el.focus();
+  // }, []);
   return (
     <input
       className="search"

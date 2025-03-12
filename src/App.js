@@ -174,6 +174,7 @@ function Search({ query, setQuery }) {
     function callback(e) {
       if (e.code === "Enter") {
         inputEl.current.focus();
+        setQuery("");
       }
     }
 

@@ -5,7 +5,6 @@ import { useMovie } from "./useMovie";
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-const KEY = "7fa2bfb2";
 export default function App() {
   const [query, setQuery] = useState("");
   // const [watched, setWatched] = useState([]);

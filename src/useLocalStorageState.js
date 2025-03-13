@@ -5,4 +5,11 @@ export function useLocalStorageState() {
     const storedValue = localStorage.getItem("watched");
     return JSON.parse(storedValue);
   });
+
+  useEffect(
+    function () {
+      localStorage.setItem("watched", JSON.stringify(watched));
+    },
+    [watched]
+  );
 }

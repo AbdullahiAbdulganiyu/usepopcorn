@@ -39,7 +39,7 @@ export function useMovie(query) {
         return;
       }
 
-      handleCloseMovie();
+      //   handleCloseMovie();
       fetchMovie();
       return function () {
         controller.abort();

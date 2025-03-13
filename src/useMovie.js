@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 export function useMovie() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

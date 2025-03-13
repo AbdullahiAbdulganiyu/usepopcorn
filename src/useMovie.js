@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-export function useMovie() {
+export function useMovie(query) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");

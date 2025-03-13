@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function useLocalStorageState() {
   const [watched, setWatched] = useState(function () {

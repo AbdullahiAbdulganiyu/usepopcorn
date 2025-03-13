@@ -47,4 +47,6 @@ export function useMovie(query) {
     },
     [query]
   );
+
+  return { movies, isLoading, error };
 }

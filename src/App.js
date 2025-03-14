@@ -128,13 +128,14 @@ function Search({ query, setQuery }) {
   //   el.focus();
   // }, []);
 
+  const inputEl = useRef(null);
+
   useKey("Enter", function () {
     if (document.activeElement === inputEl.current) return;
     inputEl.current.focus();
     setQuery("");
   });
 
-  const inputEl = useRef(null);
   // useEffect(
   //   function () {
   //     function callback(e) {
